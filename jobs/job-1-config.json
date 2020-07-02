@@ -1,0 +1,31 @@
+{
+	"id": 1,
+	"name": "Job 1",
+	"client": "Ourselves",
+	"instructions": [
+		{
+			"order": "query",
+			"attributes": {
+				"source": "sqlite",
+				"database": "SOURCE/testing.db",
+				"username": "jameson",
+				"password": "petname123",
+				"table": "accounts",
+				"path": "queries/ourselves-accounts.sql"
+			}
+		},
+		{
+			"order": "process",
+			"attributes": {
+				"path": "rules/job-1-rules.py"
+			}
+		},
+		{
+			"order": "deliver",
+			"attributes": {
+				"destination": "salesforce",
+				"path": "fieldmaps/job-1-fieldmap.sdl"
+			}
+		}
+	]
+}
